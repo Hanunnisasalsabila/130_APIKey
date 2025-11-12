@@ -6,3 +6,14 @@ require('dotenv').config()
 
 const app = express()
 const port = 3306
+
+app.use(express.json())
+app.use(express.static(path.join(__dirname, 'public')))
+
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'SachaFoxie8',
+  database: 'apikey_db'
+})
+
