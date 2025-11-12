@@ -5,7 +5,7 @@ const mysql = require('mysql2')
 require('dotenv').config()
 
 const app = express()
-const port = 3306
+const port = 3300
 
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')))
