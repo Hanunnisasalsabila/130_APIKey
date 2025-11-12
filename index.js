@@ -17,3 +17,10 @@ const db = mysql.createConnection({
   database: 'apikey_db'
 })
 
+db.connect((err) => {
+  if (err) {
+    console.error('❌ Gagal terhubung ke database:', err)
+  } else {
+    console.log('✅ Terhubung ke database MySQL')
+  }
+})
